@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.selected-text-menu {
+    display: block;
+}
+
+.navbar {
+    cursor: pointer;
+}
+
+.text {
+    padding: 0.5em;
+    padding-right: 2em;
+    border: solid 1px black;
+    border-top: none;
+
+    font-family: Roboto, sans-serif;
+}
+
+.selected.text {
+    border: solid 1px black;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.arrow-down {
+    margin: -0.1em -1.5em 0 auto;
+    width: 10px;
+    height: 10px;
+    align-self: center;
+    background: linear-gradient(45deg, black 50%, transparent 50%);
+    transform: rotate(225deg);
+
+    transition: transform 200ms ease;
+}
+
+.options {
+    display: absolute;
+    pointer-events: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    transition: max-height 500ms, opacity 200ms;
+}
+
+.option.text {
+    transition: background-color 200ms, color 200ms;
+}
+
+.option.text:hover {
+    background: black;
+    color: white;
+}
+
+.navbar:hover .arrow-down{
+    transform: rotate(315deg);
+}
+
+.navbar:hover .options {
+    pointer-events: auto;
+    opacity: 1;
+    max-height: 100%;
+}
