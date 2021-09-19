@@ -9,7 +9,7 @@
     display: block;
 }
 
-.navbar {
+.dropdown {
     cursor: pointer;
 }
 
@@ -59,11 +59,11 @@
     color: white;
 }
 
-.navbar:hover .arrow-down{
+.dropdown:hover .arrow-down{
     transform: rotate(315deg);
 }
 
-.navbar:hover .options {
+.dropdown:hover .options {
     pointer-events: auto;
     opacity: 1;
     max-height: 100%;
